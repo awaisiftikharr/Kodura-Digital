@@ -15,7 +15,7 @@ export default function WorkPage() {
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionEyebrow>03 / SELECTED WORK</SectionEyebrow>
-        <SectionHeading>Selected Concept Work</SectionHeading>
+        <SectionHeading level={1}>Selected Concept Work</SectionHeading>
         <div className="mt-10 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {workItems.map((item) => (
             <Card key={item.slug} className="h-full">

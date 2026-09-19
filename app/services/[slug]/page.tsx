@@ -40,17 +40,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         provider: {
           "@type": "Organization",
           name: "Kodura Digital",
-          url: "https://koduradigital.org",
+          url: "https://www.koduradigital.org",
         },
         areaServed: ["Worldwide", "United States", "United Kingdom", "Canada", "Australia", "United Arab Emirates", "Europe"],
-        url: `https://koduradigital.org/services/${service.slug}`,
+        url: `https://www.koduradigital.org/services/${service.slug}`,
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://koduradigital.org/" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://koduradigital.org/services" },
-          { "@type": "ListItem", position: 3, name: service.title, item: `https://koduradigital.org/services/${service.slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.koduradigital.org/" },
+          { "@type": "ListItem", position: 2, name: "Services", item: "https://www.koduradigital.org/services" },
+          { "@type": "ListItem", position: 3, name: service.title, item: `https://www.koduradigital.org/services/${service.slug}` },
         ],
       },
     ],
@@ -122,6 +122,20 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               </ul>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold text-white">Explore related services</h2>
+        <div className="mt-5 flex flex-wrap gap-3">
+          {services.filter((entry) => entry.slug !== service.slug).slice(0, 3).map((entry) => (
+            <Link key={entry.slug} href={`/services/${entry.slug}`} className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-blue-200 hover:border-blue-300/40 hover:bg-blue-300/10">
+              {entry.title}
+            </Link>
+          ))}
+          <Link href="/contact" className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-blue-200 hover:border-blue-300/40 hover:bg-blue-300/10">
+            Talk to Kodura
+          </Link>
         </div>
       </section>
 

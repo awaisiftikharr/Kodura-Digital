@@ -15,7 +15,7 @@ export default function IndustriesPage() {
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionEyebrow>INDUSTRIES</SectionEyebrow>
-        <SectionHeading>Digital growth is never one-size-fits-all.</SectionHeading>
+        <SectionHeading level={1}>Digital growth is never one-size-fits-all.</SectionHeading>
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {industries.map((industry) => (
             <Card key={industry.slug} className="h-full">

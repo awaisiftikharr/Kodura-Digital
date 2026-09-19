@@ -36,9 +36,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://koduradigital.org/" },
-          { "@type": "ListItem", position: 2, name: "Industries", item: "https://koduradigital.org/industries" },
-          { "@type": "ListItem", position: 3, name: industry.title, item: `https://koduradigital.org/industries/${industry.slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.koduradigital.org/" },
+          { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.koduradigital.org/industries" },
+          { "@type": "ListItem", position: 3, name: industry.title, item: `https://www.koduradigital.org/industries/${industry.slug}` },
         ],
       }} />
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
           </div>
         </nav>
         <SectionEyebrow>INDUSTRY</SectionEyebrow>
-        <SectionHeading>{industry.title}</SectionHeading>
+        <SectionHeading level={1}>{industry.title}</SectionHeading>
         <p className="mt-6 max-w-3xl text-lg text-slate-300">{industry.description}</p>
       </section>
 

@@ -23,7 +23,7 @@ export default async function FreeGrowthAuditPage({ searchParams }: { searchPara
       )}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionEyebrow>FREE GROWTH AUDIT</SectionEyebrow>
-        <SectionHeading>Find Where Your Digital Growth Is Being Lost.</SectionHeading>
+        <SectionHeading level={1}>Find Where Your Digital Growth Is Being Lost.</SectionHeading>
         <p className="mt-6 max-w-3xl text-lg text-slate-300">
           Kodura can review your website, SEO, search visibility, lead capture, conversion, digital presence, customer journey, and growth opportunities to uncover the gaps that are limiting performance.
         </p>

@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+const siteUrl = "https://www.koduradigital.org";
+
 const routes = [
   "",
   "/about",
@@ -33,8 +35,8 @@ const routes = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
-    url: `https://koduradigital.org${route}`,
-    lastModified: "2026-09-19",
+    url: `${siteUrl}${route}`,
+    lastModified: new Date(),
     changeFrequency: "weekly",
     priority: route === "" ? 1 : 0.8,
   }));

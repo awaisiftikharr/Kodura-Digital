@@ -16,7 +16,7 @@ export default function ServicesPage() {
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionEyebrow>02 / WHAT WE DO</SectionEyebrow>
-        <SectionHeading>One Partner.</SectionHeading>
+        <SectionHeading level={1}>One Partner.</SectionHeading>
         <SectionHeading>Every Digital Layer.</SectionHeading>
         <div className="mt-8 max-w-3xl">
           <SectionParagraph>

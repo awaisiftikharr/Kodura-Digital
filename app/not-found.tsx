@@ -6,9 +6,17 @@ export default function NotFound() {
       <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-blue-300">404</p>
       <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl">Page not found.</h1>
       <p className="mt-4 text-slate-300">The page you requested does not exist, but the growth strategy still does.</p>
-      <Link href="/" className="mt-8 inline-flex rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-400">
-        Return home
-      </Link>
+      <div className="mt-8 flex flex-wrap justify-center gap-3">
+        <Link href="/" className="inline-flex rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-400">
+          Return home
+        </Link>
+        <Link href="/services" className="inline-flex rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">
+          Explore services
+        </Link>
+        <Link href="/contact" className="inline-flex rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">
+          Contact Kodura
+        </Link>
+      </div>
     </main>
   );
 }

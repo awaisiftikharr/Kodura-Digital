@@ -7,16 +7,18 @@ export function SectionEyebrow({ children }: { children: ReactNode }) {
   );
 }
 
-export function SectionHeading({ children, align = "left" }: { children: ReactNode; align?: "left" | "center" }) {
+export function SectionHeading({ children, align = "left", level = 2 }: { children: ReactNode; align?: "left" | "center"; level?: 1 | 2 }) {
+  const Heading = level === 1 ? "h1" : "h2";
+
   return (
-    <h2
+    <Heading
       className={[
         "bg-gradient-to-r from-white via-white to-lime-200 bg-clip-text text-3xl font-black tracking-[-0.04em] text-transparent sm:text-4xl lg:text-5xl",
         align === "center" ? "text-center" : "text-left",
       ].join(" ")}
     >
       {children}
-    </h2>
+    </Heading>
   );
 }
 

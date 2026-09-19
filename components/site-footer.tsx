@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/brand-mark";
+import { TrackedLink } from "@/components/analytics";
 
 export function SiteFooter() {
   return (
@@ -10,9 +11,9 @@ export function SiteFooter() {
             <p className="text-xs font-black uppercase tracking-[0.24em] text-slate-700">Ready when you are</p>
             <h2 className="mt-3 max-w-xl text-3xl font-black tracking-[-0.04em] sm:text-4xl">Have a digital problem to solve?</h2>
           </div>
-          <Link href="/contact" className="inline-flex shrink-0 items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800">
+          <TrackedLink href="/contact" className="inline-flex shrink-0 items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800" eventName="primary_cta_click" eventParameters={{ cta_location: "site_footer", cta_variant: "primary" }}>
             Start a conversation <span className="ml-2 text-lime-300">↗</span>
-          </Link>
+          </TrackedLink>
         </div>
 
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
@@ -45,13 +46,14 @@ export function SiteFooter() {
               <li><Link href="/about" className="hover:text-white">About</Link></li>
               <li><Link href="/work" className="hover:text-white">Our Work</Link></li>
               <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link href="/free-growth-audit" className="hover:text-white">Free Growth Audit</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">Contact</h3>
             <ul className="space-y-3 text-sm text-slate-300">
-              <li><a href="mailto:koduradigital@gmail.com" className="hover:text-white">koduradigital@gmail.com</a></li>
+              <li><TrackedLink href="mailto:koduradigital@gmail.com" className="hover:text-white" eventName="email_click" eventParameters={{ link_location: "site_footer" }}>koduradigital@gmail.com</TrackedLink></li>
               <li><a href="tel:+923414612698" className="hover:text-white">+92 341 4612698</a></li>
               <li><a href="https://instagram.com/koduradigital" target="_blank" rel="noreferrer" className="hover:text-white">@koduradigital</a></li>
               <li className="pt-2 text-slate-400">Global digital growth partner</li>

@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@/components/analytics";
+import { StructuredData } from "@/components/structured-data";
 
 const sora = Sora({
   variable: "--font-sans",
@@ -9,7 +10,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://koduradigital.org"),
+  metadataBase: new URL("https://www.koduradigital.org"),
   applicationName: "Kodura Digital",
   authors: [{ name: "Kodura Digital" }],
   creator: "Kodura Digital",
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     title: "Kodura Digital",
     description:
       "Digital Solutions That Drive Business Growth.",
-    url: "https://koduradigital.org",
+    url: "https://www.koduradigital.org",
     siteName: "Kodura Digital",
     type: "website",
     locale: "en_US",
@@ -73,10 +74,41 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#111318",
+};
+
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.koduradigital.org/#organization",
+      name: "Kodura Digital",
+      url: "https://www.koduradigital.org",
+      logo: "https://www.koduradigital.org/favicon.svg",
+      email: "koduradigital@gmail.com",
+      telephone: "+923414612698",
+      sameAs: ["https://instagram.com/koduradigital"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.koduradigital.org/#website",
+      name: "Kodura Digital",
+      url: "https://www.koduradigital.org",
+      publisher: { "@id": "https://www.koduradigital.org/#organization" },
+      inLanguage: "en",
+    },
+  ],
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={sora.variable}>
       <body className="bg-[#111318] text-white antialiased">
+        <StructuredData data={siteSchema} />
         <Analytics />
         {children}
       </body>

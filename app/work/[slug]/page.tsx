@@ -36,9 +36,9 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://koduradigital.org/" },
-          { "@type": "ListItem", position: 2, name: "Work", item: "https://koduradigital.org/work" },
-          { "@type": "ListItem", position: 3, name: item.title, item: `https://koduradigital.org/work/${item.slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.koduradigital.org/" },
+          { "@type": "ListItem", position: 2, name: "Work", item: "https://www.koduradigital.org/work" },
+          { "@type": "ListItem", position: 3, name: item.title, item: `https://www.koduradigital.org/work/${item.slug}` },
         ],
       }} />
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
           </div>
         </nav>
         <SectionEyebrow>{item.type}</SectionEyebrow>
-        <SectionHeading>{item.title}</SectionHeading>
+        <SectionHeading level={1}>{item.title}</SectionHeading>
         <p className="mt-6 max-w-3xl text-lg text-slate-300">{item.summary}</p>
       </section>
 

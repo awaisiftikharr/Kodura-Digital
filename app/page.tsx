@@ -8,43 +8,22 @@ import { TrackedLink } from "@/components/analytics";
 
 const homepageSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      name: "Kodura Digital",
-      url: "https://koduradigital.org",
-      email: "koduradigital@gmail.com",
-      telephone: "+923414612698",
-      sameAs: ["https://instagram.com/koduradigital"],
-      description: "Kodura Digital helps businesses worldwide solve digital problems with strategy, design, technology, and growth execution.",
-      areaServed: ["United States", "United Kingdom", "Canada", "Australia", "United Arab Emirates", "Europe"],
-      knowsAbout: ["Digital marketing", "SEO", "Lead generation", "Web development", "App development", "AI automation"],
-    },
-    {
-      "@type": "ProfessionalService",
-      name: "Kodura Digital",
-      url: "https://koduradigital.org",
-      email: "koduradigital@gmail.com",
-      telephone: "+923414612698",
-      areaServed: ["Worldwide", "United States", "United Kingdom", "Canada", "Australia", "United Arab Emirates", "Europe"],
-      priceRange: "$$",
-      serviceType: ["Digital marketing", "SEO", "Lead generation", "Web development", "App development", "AI automation"],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "sales",
-        email: "koduradigital@gmail.com",
-        telephone: "+923414612698",
-        availableLanguage: ["English"],
-      },
-    },
-    {
-      "@type": "WebSite",
-      name: "Kodura Digital",
-      url: "https://koduradigital.org",
-      publisher: { "@type": "Organization", name: "Kodura Digital" },
-      inLanguage: "en",
-    },
-  ],
+  "@type": "ProfessionalService",
+  "@id": "https://www.koduradigital.org/#professional-service",
+  name: "Kodura Digital",
+  url: "https://www.koduradigital.org",
+  email: "koduradigital@gmail.com",
+  telephone: "+923414612698",
+  provider: { "@id": "https://www.koduradigital.org/#organization" },
+  areaServed: ["Worldwide", "United States", "United Kingdom", "Canada", "Australia", "United Arab Emirates", "Europe"],
+  serviceType: ["Digital marketing", "SEO", "Lead generation", "Web development", "App development", "AI automation"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    email: "koduradigital@gmail.com",
+    telephone: "+923414612698",
+    availableLanguage: ["English"],
+  },
 };
 
 export default function Home() {

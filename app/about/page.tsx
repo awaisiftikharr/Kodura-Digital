@@ -14,7 +14,7 @@ export default function AboutPage() {
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionEyebrow>ABOUT</SectionEyebrow>
-        <SectionHeading>Technology Is Useful.</SectionHeading>
+        <SectionHeading level={1}>Technology Is Useful.</SectionHeading>
         <SectionHeading>Business Results Are the Point.</SectionHeading>
         <div className="mt-8 max-w-4xl space-y-5">
           <SectionParagraph>
