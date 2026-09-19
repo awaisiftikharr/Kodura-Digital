@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 Copy `.env.example` to `.env.local` for local testing or add the same variables to your hosting provider:
 
 ```env
-NEXT_PUBLIC_GA_ID=
+NEXT_PUBLIC_GA_ID=G-ZJ1PQJS4GL
 RESEND_API_KEY=
 RESEND_FROM_EMAIL=Kodura Digital <hello@your-verified-domain.com>
 CONTACT_EMAIL=koduradigital@gmail.com
