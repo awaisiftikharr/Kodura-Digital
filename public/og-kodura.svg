@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#050914"/>
+  <rect x="105" y="90" width="990" height="450" rx="36" fill="url(#paint0_linear_297_2)" stroke="rgba(255,255,255,0.08)"/>
+  <circle cx="235" cy="220" r="120" fill="rgba(22,119,255,0.15)"/>
+  <circle cx="925" cy="390" r="150" fill="rgba(67,143,255,0.12)"/>
+  <path d="M206 298C260 222 339 182 430 182H510C612 182 689 230 760 302L939 486H763L657 395C603 345 553 318 490 318H425C364 318 318 337 274 386L206 298Z" fill="rgba(255,255,255,0.06)"/>
+  <text x="130" y="210" fill="#F5F8FF" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="7">KODURA DIGITAL</text>
+  <text x="130" y="333" fill="#F5F8FF" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Digital Solutions</text>
+  <text x="130" y="408" fill="#F5F8FF" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">That Drive</text>
+  <text x="130" y="483" fill="#F5F8FF" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Business Growth.</text>
+  <rect x="130" y="510" width="225" height="10" rx="5" fill="#1677FF"/>
+  <defs>
+    <linearGradient id="paint0_linear_297_2" x1="142" y1="104" x2="1075" y2="548" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1F38"/>
+      <stop offset="1" stop-color="#081226"/>
+    </linearGradient>
+  </defs>
+</svg>

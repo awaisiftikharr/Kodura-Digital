@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="kLogo" x1="10" y1="10" x2="52" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8BD0FF"/>
+      <stop offset="0.35" stop-color="#3B8CFF"/>
+      <stop offset="1" stop-color="#0B5BFF"/>
+    </linearGradient>
+    <linearGradient id="kWhite" x1="20" y1="18" x2="47" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F8FF"/>
+      <stop offset="1" stop-color="#CCDEFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#050914"/>
+  <rect x="7" y="7" width="50" height="50" rx="15" fill="url(#kLogo)" opacity="0.14"/>
+  <path d="M19 18V46H27V31.5L38 46H47L33.5 31.8L47 18H38L27 29.4V18H19Z" fill="url(#kWhite)"/>
+  <path d="M31 18H38L27 30.4L38 44H31L21.5 30.4L31 18Z" fill="url(#kLogo)" opacity="0.95"/>
+  <path d="M25 18H29V46H25V18Z" fill="url(#kWhite)" opacity="0.9"/>
+</svg>
