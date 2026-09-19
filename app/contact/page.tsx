@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/page-shell";
 import { Card, SectionEyebrow, SectionHeading } from "@/components/ui";
+import { ConversionTracker } from "@/components/conversion-tracker";
+import { TrackedLink } from "@/components/analytics";
 
 export const metadata: Metadata = {
   title: "Contact Kodura Digital",
@@ -8,11 +10,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
-export default async function ContactPage({ searchParams }: { searchParams: Promise<{ submitted?: string }> }) {
-  const { submitted } = await searchParams;
+export default async function ContactPage({ searchParams }: { searchParams: Promise<{ submitted?: string; form?: string }> }) {
+  const { submitted, form } = await searchParams;
 
   return (
     <PageShell>
+      {submitted === "1" && form === "contact" && (
+        <ConversionTracker
+          eventName="contact_form_submit"
+          eventParameters={{ form_location: "contact_page" }}
+          storageKey="ga-contact-form-submit"
+        />
+      )}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionEyebrow>CONTACT</SectionEyebrow>
         <SectionHeading>Have a Growth Goal?</SectionHeading>
@@ -24,17 +33,18 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
         )}
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="space-y-5 text-slate-300">
-            <p><strong className="text-white">Email:</strong> <a href="mailto:koduradigital@gmail.com" className="text-blue-300 hover:text-blue-200">koduradigital@gmail.com</a></p>
+            <p><strong className="text-white">Email:</strong> <TrackedLink href="mailto:koduradigital@gmail.com" className="text-blue-300 hover:text-blue-200" eventName="email_click" eventParameters={{ link_location: "contact_page" }}>koduradigital@gmail.com</TrackedLink></p>
             <p><strong className="text-white">Phone / WhatsApp:</strong> <a href="tel:+923414612698" className="text-blue-300 hover:text-blue-200">+92 341 4612698</a></p>
             <p><strong className="text-white">Instagram:</strong> <a href="https://instagram.com/koduradigital" target="_blank" rel="noreferrer" className="text-blue-300 hover:text-blue-200">@koduradigital</a></p>
             <p><strong className="text-white">Website:</strong> <a href="https://koduradigital.org" target="_blank" rel="noreferrer" className="text-blue-300 hover:text-blue-200">https://koduradigital.org</a></p>
-            <a href="https://wa.me/923414612698" target="_blank" rel="noreferrer" className="mt-4 inline-flex rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-400">
+            <TrackedLink href="https://wa.me/923414612698" target="_blank" rel="noreferrer" className="mt-4 inline-flex rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-400" eventName="whatsapp_click" eventParameters={{ link_location: "contact_page" }}>
               Chat on WhatsApp
-            </a>
+            </TrackedLink>
           </div>
 
           <Card>
             <form action="/api/contact" method="post" className="grid gap-5 md:grid-cols-2">
+              <input type="hidden" name="form_type" value="contact" />
               <label className="flex flex-col gap-2 text-sm text-slate-300">
                 Name
                 <input name="name" required className="rounded-xl border border-white/10 bg-slate-950 px-3 py-2.5 text-white" />

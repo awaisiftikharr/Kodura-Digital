@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/brand-mark";
+import { TrackedLink } from "@/components/analytics";
 
 const primaryNav = [
   { href: "/services", label: "Services" },
@@ -36,12 +37,14 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <Link
+          <TrackedLink
             href="/free-growth-audit"
             className="inline-flex items-center justify-center rounded-full bg-lime-300 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-[0_0_28px_rgba(210,255,77,0.22)] transition hover:bg-lime-200"
+            eventName="primary_cta_click"
+            eventParameters={{ cta_location: "header_desktop", cta_variant: "primary" }}
           >
             Get a Free Growth Audit
-          </Link>
+          </TrackedLink>
         </div>
 
         <details className="md:hidden">
@@ -58,12 +61,14 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
-              <Link
+              <TrackedLink
                 href="/free-growth-audit"
                 className="mt-2 inline-flex items-center justify-center rounded-full bg-lime-300 px-4 py-2.5 text-sm font-bold text-slate-950"
+                eventName="primary_cta_click"
+                eventParameters={{ cta_location: "header_mobile", cta_variant: "primary" }}
               >
                 Free Growth Audit
-              </Link>
+              </TrackedLink>
             </nav>
           </div>
         </details>

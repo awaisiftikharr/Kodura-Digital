@@ -18,6 +18,7 @@ function escapeHtml(value: string) {
 
 export async function POST(request: Request) {
   const formData = await request.formData();
+  const formType = formData.get("form_type") === "growth_audit" ? "growth_audit" : "contact";
   const values = Object.fromEntries(
     requiredFields.map((field) => [field, String(formData.get(field) || "").trim()]),
   ) as Record<(typeof requiredFields)[number], string>;
@@ -72,5 +73,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "We could not send your message. Please try again." }, { status: 502 });
   }
 
-  return NextResponse.redirect(new URL("/contact?submitted=1", request.url), 303);
+  const successPath = formType === "growth_audit" ? "/free-growth-audit" : "/contact";
+  return NextResponse.redirect(new URL(`${successPath}?submitted=1&form=${formType}`, request.url), 303);
 }

@@ -4,6 +4,7 @@ import { BrandMark } from "@/components/brand-mark";
 import { ButtonLink, Card, SectionEyebrow, SectionHeading } from "@/components/ui";
 import { services, workItems } from "@/lib/site-data";
 import { StructuredData } from "@/components/structured-data";
+import { TrackedLink } from "@/components/analytics";
 
 const homepageSchema = {
   "@context": "https://schema.org",
@@ -254,16 +255,17 @@ export default function Home() {
             <h2 className="text-4xl font-black tracking-tight text-white">Have a Growth Goal?</h2>
             <h2 className="mt-2 text-4xl font-black tracking-tight text-white">Let&apos;s Build It.</h2>
             <div className="mt-8 space-y-3 text-slate-300">
-              <p><strong className="text-white">Email:</strong> <a href="mailto:koduradigital@gmail.com" className="text-blue-300 hover:text-blue-200">koduradigital@gmail.com</a></p>
+              <p><strong className="text-white">Email:</strong> <TrackedLink href="mailto:koduradigital@gmail.com" className="text-blue-300 hover:text-blue-200" eventName="email_click" eventParameters={{ link_location: "homepage_contact" }}>koduradigital@gmail.com</TrackedLink></p>
               <p><strong className="text-white">WhatsApp:</strong> <a href="tel:+923414612698" className="text-blue-300 hover:text-blue-200">+92 341 4612698</a></p>
             </div>
             <div className="mt-6">
-              <a href="https://wa.me/923414612698" target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-400">Chat on WhatsApp</a>
+              <TrackedLink href="https://wa.me/923414612698" target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-400" eventName="whatsapp_click" eventParameters={{ link_location: "homepage_contact" }}>Chat on WhatsApp</TrackedLink>
             </div>
           </div>
 
           <Card>
             <form action="/api/contact" method="post" className="grid gap-5 md:grid-cols-2">
+              <input type="hidden" name="form_type" value="contact" />
               <label className="flex flex-col gap-2 text-sm text-slate-300">
                 Name
                 <input name="name" required className="rounded-xl border border-white/10 bg-slate-950 px-3 py-2.5 text-white" />

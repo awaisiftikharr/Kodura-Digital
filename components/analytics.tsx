@@ -1,6 +1,8 @@
 "use client";
 
 import Script from "next/script";
+import Link from "next/link";
+import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
@@ -14,7 +16,45 @@ declare global {
 }
 
 export function trackEvent(eventName: string, parameters?: Record<string, unknown>) {
-  window.gtag?.("event", eventName, parameters);
+  const event = ["event", eventName, parameters];
+  if (window.gtag) {
+    window.gtag(...event);
+    return;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(event);
+}
+
+export function TrackedLink({
+  href,
+  children,
+  eventName,
+  eventParameters,
+  ...props
+}: React.ComponentProps<typeof Link> & {
+  eventName?: string;
+  eventParameters?: Record<string, unknown>;
+  children: ReactNode;
+}) {
+  return (
+    <Link
+      {...props}
+      href={href}
+      onClick={(event) => {
+        props.onClick?.(event);
+        if (!event.defaultPrevented && eventName) {
+          trackEvent(eventName, {
+            link_destination: typeof href === "string" ? href : undefined,
+            link_text: typeof children === "string" ? children : undefined,
+            ...eventParameters,
+          });
+        }
+      }}
+    >
+      {children}
+    </Link>
+  );
 }
 
 export function Analytics() {

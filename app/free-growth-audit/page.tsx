@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/page-shell";
 import { Card, SectionEyebrow, SectionHeading } from "@/components/ui";
+import { ConversionTracker } from "@/components/conversion-tracker";
 
 export const metadata: Metadata = {
   title: "Free Growth Audit",
@@ -8,9 +9,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "/free-growth-audit" },
 };
 
-export default function FreeGrowthAuditPage() {
+export default async function FreeGrowthAuditPage({ searchParams }: { searchParams: Promise<{ submitted?: string; form?: string }> }) {
+  const { submitted, form } = await searchParams;
+
   return (
     <PageShell>
+      {submitted === "1" && form === "growth_audit" && (
+        <ConversionTracker
+          eventName="growth_audit_submit"
+          eventParameters={{ form_location: "free_growth_audit_page" }}
+          storageKey="ga-growth-audit-submit"
+        />
+      )}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionEyebrow>FREE GROWTH AUDIT</SectionEyebrow>
         <SectionHeading>Find Where Your Digital Growth Is Being Lost.</SectionHeading>
@@ -41,6 +51,7 @@ export default function FreeGrowthAuditPage() {
 
           <Card>
             <form action="/api/contact" method="post" className="grid gap-5 md:grid-cols-2">
+              <input type="hidden" name="form_type" value="growth_audit" />
               <label className="flex flex-col gap-2 text-sm text-slate-300">
                 Name
                 <input name="name" required className="rounded-xl border border-white/10 bg-slate-950 px-3 py-2.5 text-white" />

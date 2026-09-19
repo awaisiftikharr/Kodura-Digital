@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
+import { TrackedLink } from "@/components/analytics";
 
 export function SectionEyebrow({ children }: { children: ReactNode }) {
   return (
@@ -35,9 +35,17 @@ export function ButtonLink({ href, children, variant = "primary" }: { href: stri
     : "inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-lime-300/40 hover:bg-lime-300/10";
 
   return (
-    <Link href={href} className={className}>
+    <TrackedLink
+      href={href}
+      className={className}
+      eventName={variant === "primary" ? "primary_cta_click" : undefined}
+      eventParameters={{
+        cta_location: href,
+        cta_variant: variant,
+      }}
+    >
       {children}
-    </Link>
+    </TrackedLink>
   );
 }
 
