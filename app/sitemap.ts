@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://www.koduradigital.org";
+const siteUrl = "https://koduradigital.vercel.app";
 
 const routes = [
   "",
