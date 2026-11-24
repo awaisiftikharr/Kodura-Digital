@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "Industries We Support",
   description: "Kodura Digital supports SaaS, healthcare, real estate, e-commerce, professional services, local businesses, startups, and B2B growth goals.",
   alternates: { canonical: "/industries" },
+  openGraph: {
+    title: "Industries We Support",
+    description: "Kodura Digital supports SaaS, healthcare, real estate, e-commerce, professional services, local businesses, startups, and B2B growth goals.",
+    url: "https://koduradigital.vercel.app/industries",
+    siteName: "Kodura Digital",
+    type: "website",
+  },
 };
 
 export default function IndustriesPage() {
