@@ -10,7 +10,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.koduradigital.org"),
+  metadataBase: new URL("https://koduradigital.vercel.app"),
   applicationName: "Kodura Digital",
   authors: [{ name: "Kodura Digital" }],
   creator: "Kodura Digital",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Kodura Digital",
     description:
       "Digital Solutions That Drive Business Growth.",
-    url: "https://www.koduradigital.org",
+    url: "https://koduradigital.vercel.app",
     siteName: "Kodura Digital",
     type: "website",
     locale: "en_US",
@@ -85,20 +85,20 @@ const siteSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.koduradigital.org/#organization",
+      "@id": "https://koduradigital.vercel.app/#organization",
       name: "Kodura Digital",
-      url: "https://www.koduradigital.org",
-      logo: "https://www.koduradigital.org/favicon.svg",
+      url: "https://koduradigital.vercel.app",
+      logo: "https://koduradigital.vercel.app/favicon.svg",
       email: "koduradigital@gmail.com",
       telephone: "+923414612698",
       sameAs: ["https://instagram.com/koduradigital"],
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.koduradigital.org/#website",
+      "@id": "https://koduradigital.vercel.app/#website",
       name: "Kodura Digital",
-      url: "https://www.koduradigital.org",
-      publisher: { "@id": "https://www.koduradigital.org/#organization" },
+      url: "https://koduradigital.vercel.app",
+      publisher: { "@id": "https://koduradigital.vercel.app/#organization" },
       inLanguage: "en",
     },
   ],
