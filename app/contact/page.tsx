@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "Contact Kodura Digital",
   description: "Get in touch with Kodura Digital for digital marketing, SEO, web development, app development, and AI growth projects.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Kodura Digital",
+    description: "Get in touch with Kodura Digital for digital marketing, SEO, web development, app development, and AI growth projects.",
+    url: "https://koduradigital.vercel.app/contact",
+    siteName: "Kodura Digital",
+    type: "website",
+  },
 };
 
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ submitted?: string; form?: string }> }) {
