@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Free Growth Audit",
   description: "Request a free growth audit from Kodura Digital to review your website, SEO, lead generation, conversion points, and digital growth opportunities.",
   alternates: { canonical: "/free-growth-audit" },
+  openGraph: {
+    title: "Free Growth Audit",
+    description: "Request a free growth audit from Kodura Digital to review your website, SEO, lead generation, conversion points, and digital growth opportunities.",
+    url: "https://koduradigital.vercel.app/free-growth-audit",
+    siteName: "Kodura Digital",
+    type: "website",
+  },
 };
 
 export default async function FreeGrowthAuditPage({ searchParams }: { searchParams: Promise<{ submitted?: string; form?: string }> }) {

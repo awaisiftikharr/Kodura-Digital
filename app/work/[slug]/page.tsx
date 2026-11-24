@@ -18,6 +18,13 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
       title: `${item.title} | Concept Work`,
       description: item.summary,
       alternates: { canonical: `/work/${item.slug}` },
+      openGraph: {
+        title: `${item.title} | Concept Work`,
+        description: item.summary,
+        url: `https://koduradigital.vercel.app/work/${item.slug}`,
+        siteName: "Kodura Digital",
+        type: "website",
+      },
     };
   });
 }
@@ -36,9 +43,9 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.koduradigital.org/" },
-          { "@type": "ListItem", position: 2, name: "Work", item: "https://www.koduradigital.org/work" },
-          { "@type": "ListItem", position: 3, name: item.title, item: `https://www.koduradigital.org/work/${item.slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://koduradigital.vercel.app/" },
+          { "@type": "ListItem", position: 2, name: "Work", item: "https://koduradigital.vercel.app/work" },
+          { "@type": "ListItem", position: 3, name: item.title, item: `https://koduradigital.vercel.app/work/${item.slug}` },
         ],
       }} />
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">

@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: "Review the terms that apply when you use the Kodura Digital website or enquire about its digital services.",
   alternates: { canonical: "/terms-and-conditions" },
+  openGraph: {
+    title: "Terms & Conditions",
+    description: "Review the terms that apply when you use the Kodura Digital website or enquire about its digital services.",
+    url: "https://koduradigital.vercel.app/terms-and-conditions",
+    siteName: "Kodura Digital",
+    type: "website",
+  },
 };
 
 export default function TermsPage() {

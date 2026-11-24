@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   description:
     "Explore Kodura Digital services for digital marketing, SEO, lead generation, web development, app development, and AI automation.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Digital Marketing, SEO & Growth Services",
+    description: "Explore Kodura Digital services for digital marketing, SEO, lead generation, web development, app development, and AI automation.",
+    url: "https://koduradigital.vercel.app/services",
+    siteName: "Kodura Digital",
+    type: "website",
+  },
 };
 
 export default function ServicesPage() {

@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "Selected Work",
   description: "Explore Kodura Digital concept work across healthcare, real estate, SaaS, e-commerce, and AI operations.",
   alternates: { canonical: "/work" },
+  openGraph: {
+    title: "Selected Work",
+    description: "Explore Kodura Digital concept work across healthcare, real estate, SaaS, e-commerce, and AI operations.",
+    url: "https://koduradigital.vercel.app/work",
+    siteName: "Kodura Digital",
+    type: "website",
+  },
 };
 
 export default function WorkPage() {

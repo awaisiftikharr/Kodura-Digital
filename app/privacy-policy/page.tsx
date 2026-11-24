@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Read how Kodura Digital handles information submitted through its website, contact forms, analytics, and direct communications.",
   alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy",
+    description: "Read how Kodura Digital handles information submitted through its website, contact forms, analytics, and direct communications.",
+    url: "https://koduradigital.vercel.app/privacy-policy",
+    siteName: "Kodura Digital",
+    type: "website",
+  },
 };
 
 export default function PrivacyPolicyPage() {

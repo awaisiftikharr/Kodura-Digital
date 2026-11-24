@@ -18,6 +18,13 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
       title: service.metaTitle,
       description: service.metaDescription,
       alternates: { canonical: `/services/${service.slug}` },
+      openGraph: {
+        title: service.metaTitle,
+        description: service.metaDescription,
+        url: `https://koduradigital.vercel.app/services/${service.slug}`,
+        siteName: "Kodura Digital",
+        type: "website",
+      },
     };
   });
 }
@@ -40,17 +47,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         provider: {
           "@type": "Organization",
           name: "Kodura Digital",
-          url: "https://www.koduradigital.org",
+          url: "https://koduradigital.vercel.app",
         },
         areaServed: ["Worldwide", "United States", "United Kingdom", "Canada", "Australia", "United Arab Emirates", "Europe"],
-        url: `https://www.koduradigital.org/services/${service.slug}`,
+        url: `https://koduradigital.vercel.app/services/${service.slug}`,
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.koduradigital.org/" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://www.koduradigital.org/services" },
-          { "@type": "ListItem", position: 3, name: service.title, item: `https://www.koduradigital.org/services/${service.slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://koduradigital.vercel.app/" },
+          { "@type": "ListItem", position: 2, name: "Services", item: "https://koduradigital.vercel.app/services" },
+          { "@type": "ListItem", position: 3, name: service.title, item: `https://koduradigital.vercel.app/services/${service.slug}` },
         ],
       },
     ],

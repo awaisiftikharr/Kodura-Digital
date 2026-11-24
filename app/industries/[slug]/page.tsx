@@ -18,6 +18,13 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
       title: `${industry.title} Growth Strategy`,
       description: industry.description,
       alternates: { canonical: `/industries/${industry.slug}` },
+      openGraph: {
+        title: `${industry.title} Growth Strategy`,
+        description: industry.description,
+        url: `https://koduradigital.vercel.app/industries/${industry.slug}`,
+        siteName: "Kodura Digital",
+        type: "website",
+      },
     };
   });
 }
@@ -36,9 +43,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.koduradigital.org/" },
-          { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.koduradigital.org/industries" },
-          { "@type": "ListItem", position: 3, name: industry.title, item: `https://www.koduradigital.org/industries/${industry.slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://koduradigital.vercel.app/" },
+          { "@type": "ListItem", position: 2, name: "Industries", item: "https://koduradigital.vercel.app/industries" },
+          { "@type": "ListItem", position: 3, name: industry.title, item: `https://koduradigital.vercel.app/industries/${industry.slug}` },
         ],
       }} />
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
