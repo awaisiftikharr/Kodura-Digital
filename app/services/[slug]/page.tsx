@@ -18,6 +18,13 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
       title: service.metaTitle,
       description: service.metaDescription,
       alternates: { canonical: `/services/${service.slug}` },
+      openGraph: {
+        title: service.metaTitle,
+        description: service.metaDescription,
+        url: `https://koduradigital.vercel.app/services/${service.slug}`,
+        siteName: "Kodura Digital",
+        type: "website",
+      },
     };
   });
 }
