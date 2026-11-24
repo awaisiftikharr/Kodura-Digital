@@ -36,7 +36,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
             <p><strong className="text-white">Email:</strong> <TrackedLink href="mailto:koduradigital@gmail.com" className="text-blue-300 hover:text-blue-200" eventName="email_click" eventParameters={{ link_location: "contact_page" }}>koduradigital@gmail.com</TrackedLink></p>
             <p><strong className="text-white">Phone / WhatsApp:</strong> <a href="tel:+923414612698" className="text-blue-300 hover:text-blue-200">+92 341 4612698</a></p>
             <p><strong className="text-white">Instagram:</strong> <a href="https://instagram.com/koduradigital" target="_blank" rel="noreferrer" className="text-blue-300 hover:text-blue-200">@koduradigital</a></p>
-            <p><strong className="text-white">Website:</strong> <a href="https://www.koduradigital.org" target="_blank" rel="noreferrer" className="text-blue-300 hover:text-blue-200">https://www.koduradigital.org</a></p>
+            <p><strong className="text-white">Website:</strong> <a href="https://koduradigital.vercel.app" target="_blank" rel="noreferrer" className="text-blue-300 hover:text-blue-200">https://koduradigital.vercel.app</a></p>
             <TrackedLink href="https://wa.me/923414612698" target="_blank" rel="noreferrer" className="mt-4 inline-flex rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-400" eventName="whatsapp_click" eventParameters={{ link_location: "contact_page" }}>
               Chat on WhatsApp
             </TrackedLink>
