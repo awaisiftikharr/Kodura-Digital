@@ -9,12 +9,12 @@ import { TrackedLink } from "@/components/analytics";
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://www.koduradigital.org/#professional-service",
+  "@id": "https://koduradigital.vercel.app/#professional-service",
   name: "Kodura Digital",
-  url: "https://www.koduradigital.org",
+  url: "https://koduradigital.vercel.app",
   email: "koduradigital@gmail.com",
   telephone: "+923414612698",
-  provider: { "@id": "https://www.koduradigital.org/#organization" },
+  provider: { "@id": "https://koduradigital.vercel.app/#organization" },
   areaServed: ["Worldwide", "United States", "United Kingdom", "Canada", "Australia", "United Arab Emirates", "Europe"],
   serviceType: ["Digital marketing", "SEO", "Lead generation", "Web development", "App development", "AI automation"],
   contactPoint: {
@@ -145,31 +145,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="rounded-[2rem] border border-white/15 bg-[#17191e] p-8 shadow-[0_25px_80px_rgba(0,0,0,0.24)] md:p-12">
-          <SectionEyebrow>03 / REPRESENTATIVE CLIENT VOICE</SectionEyebrow>
-          <SectionHeading>Good work travels.</SectionHeading>
-          <p className="mt-3 max-w-2xl text-sm text-slate-400">Illustrative perspectives showing the kind of outcomes Kodura is built to create.</p>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {[
-              ["United Kingdom", "Web development", "“Kodura gave our new digital presence the clarity and confidence we were missing.”", "— Amelia R."],
-              ["United Arab Emirates", "Lead generation", "“The process was focused, practical, and built around the enquiries we actually needed.”", "— Omar H."],
-              ["Canada", "SEO and digital marketing", "“We finally have a growth system that makes sense to the whole team.”", "— Sofia M."],
-            ].map(([country, service, quote, name]) => (
-              <Card key={country} className="h-full border-white/10 bg-[#22252b]">
-                <div className="flex items-center justify-between gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-lime-300">
-                  <span>{country}</span>
-                  <span className="text-slate-400">{service}</span>
-                </div>
-                <p className="mt-8 text-lg font-semibold leading-8 text-white">{quote}</p>
-                <p className="mt-6 text-sm text-slate-400">{name}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <SectionEyebrow>04 / ABOUT KODURA</SectionEyebrow>
+        <SectionEyebrow>03 / ABOUT KODURA</SectionEyebrow>
         <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
           <div>
             <SectionHeading>We make digital work feel simpler.</SectionHeading>
@@ -214,7 +190,7 @@ export default function Home() {
         <div className="rounded-[2rem] border border-blue-500/20 bg-[linear-gradient(135deg,rgba(22,119,255,0.18),rgba(8,18,38,0.95))] p-8 md:p-12">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <SectionEyebrow>05 / FREE GROWTH AUDIT</SectionEyebrow>
+              <SectionEyebrow>04 / FREE GROWTH AUDIT</SectionEyebrow>
               <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Find Where Your Digital Growth Is Being Lost.
               </h2>
@@ -228,7 +204,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-        <SectionEyebrow>06 / CONTACT</SectionEyebrow>
+        <SectionEyebrow>05 / CONTACT</SectionEyebrow>
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <h2 className="text-4xl font-black tracking-tight text-white">Have a Growth Goal?</h2>
