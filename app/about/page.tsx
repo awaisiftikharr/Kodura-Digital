@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   description:
     "Learn how Kodura Digital blends digital marketing, SEO, development, AI, and automation to help businesses grow with connected digital systems.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Kodura Digital",
+    description: "Learn how Kodura Digital blends digital marketing, SEO, development, AI, and automation to help businesses grow with connected digital systems.",
+    url: "https://koduradigital.vercel.app/about",
+    siteName: "Kodura Digital",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
