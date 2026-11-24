@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.koduradigital.org/sitemap.xml",
+    sitemap: "https://koduradigital.vercel.app/sitemap.xml",
   };
 }
